@@ -1,3 +1,8 @@
+// length of path 
+var path = document.querySelector('.google');
+var length = path.getTotalLength();
+
+
 // Store 3 images
 var img0 = '../img/200.jpg';
 var img1 = '../img/300.jpg';

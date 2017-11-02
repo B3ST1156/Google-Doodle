@@ -18,7 +18,7 @@
     position: relative;
     top: -120px;
     right: -150px;
-    transform: scale(2.5)
+    transform: scale(2.5);
     }
 
 #Tree:hover {
@@ -34,6 +34,10 @@
     
 }
 
+#leaf1:hover {
+    animation: swing 1s;
+}
+
 #leaf2 {
 
     transform: scale(0.25) rotate(-90deg);
@@ -43,10 +47,20 @@
     
 }
 
+#leaf2:hover {
+    animation: swing 1s;
+}
+
 #google {
     position: relative;
     top: -1350px;
     left: -80px;
+    
+}
+
+svg .google {
+ stroke-dasharray: 20;
+ animation: ants 1s infinite;
 }
 
 #leaf3 {
@@ -58,6 +72,30 @@
     
 }
 
+#leaf3:hover {
+    animation: swing 1s;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ants {
+  
+  100% {
+    stroke-dashoffset: 100;
+  }
+  
+}
 
 @keyframes shake {
   from, to {
@@ -70,6 +108,28 @@
 
   20%, 40%, 60%, 80% {
     transform: translate3d(5px, 0, 0);
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }
 
