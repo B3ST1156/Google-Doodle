@@ -3,7 +3,7 @@
 /* Stage */
 
 #stage {
-    background: gray;
+    background: lightblue;
     height: 300px;
     width: 600px;
 }
@@ -13,7 +13,65 @@
     width: 100px;
 }
 
+#Tree {
+    
+    position: relative;
+    top: -120px;
+    right: -150px;
+    transform: scale(2.5)
+    }
 
+#Tree:hover {
+    animation: shake 1s;
+}
+
+#leaf1 {
+
+    transform: scale(0.25) rotate(-50deg);
+    position: relative;
+    left: -190px;
+    top: -500px;
+    
+}
+
+#leaf2 {
+
+    transform: scale(0.25) rotate(-90deg);
+    position: relative;
+    left: -190px;
+    top: -770px;
+    
+}
+
+#google {
+    position: relative;
+    top: -1350px;
+    left: -80px;
+}
+
+#leaf3 {
+
+    transform: scale(0.25) rotate(50deg);
+    position: relative;
+    right: -40px;
+    top: -920px;
+    
+}
+
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 
